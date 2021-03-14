@@ -23,6 +23,21 @@
                 <a href="<?= $item?>">
                     <?= basename($item)?>
                 </a>
+                <?php
+                if(filesize($item)>1024*1024)
+                {?>
+                    <?="(".round(filesize($item)/(1024*1024),2)." mb)";}
+                ?>
+                <?php
+                if(filesize($item)>1024&&filesize($item)<1024*1024)
+                {?>
+                    <?="(".round(filesize($item)/(1024),2)." kb)";}
+                ?>
+                <?php
+                if(filesize($item)<1024)
+                {?>
+                    <?="(".round(filesize($item),2)." b)";}
+                ?>
             </li>
         <?php }?>
         <?php
