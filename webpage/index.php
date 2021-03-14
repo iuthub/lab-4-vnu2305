@@ -24,9 +24,18 @@ $files = NULL;
         foreach (glob("songs/*.mp3") as $item)
         {?>
             <li class="mp3item">
-            <a href="songs/<?= $item?>">
+            <a href="<?= $item?>">
                 <?= basename($item)?>
             </a>
+            </li>
+        <?php }?>
+        <?php
+        foreach (glob("songs/*.txt") as $item)
+        {?>
+            <li class="playlistitem">
+                <a href="<?= $item?>">
+                    <?= basename($item)?>
+                </a>
             </li>
         <?php }?>
     </ul>
