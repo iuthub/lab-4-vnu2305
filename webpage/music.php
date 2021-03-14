@@ -35,6 +35,7 @@ $files = NULL;
             <li class="playlistitem">
                 <a href="<?= $item?>">
                     <?= basename($item)?>
+
                 </a>
             </li>
         <?php }?>
